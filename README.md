@@ -94,16 +94,16 @@ Exit pupeth using crtl + z command
 
 Description of 1stnet.json file
 
-/* Chain ID means Networks ID */
-/* Byzantium fault tolerance will be applied from block four */
-/* timestamp checks for the time difference between two blocks and sets the difficulty level accordingly */
-/* gaslimit can be specified */
-/* difficulty level can be viewed as average number of times requird to compute the nonce value. In a private network we can keep a low value for this in order to make the things look ease */
-/* coinbase species the miners address, the mining reward will be credited into that address */
-/* alloc section is used to prefund certain accounts */
-/* number means the block number, since this isthe genesis block the blocknumber is zero */
-/* gasUsed is the sum of gas used in all transactions of this block */
-/* parentHash is the hash of the previous block, since its is genesis block its is zero in this case */
+ Chain ID means Networks ID 
+ Byzantium fault tolerance will be applied from block four 
+ timestamp checks for the time difference between two blocks and sets the difficulty level accordingly 
+ gaslimit can be specified 
+ difficulty level can be viewed as average number of times requird to compute the nonce value. In a private network we can keep a low value for this in order to make the things look ease 
+ coinbase species the miners address, the mining reward will be credited into that address  
+ alloc section is used to prefund certain accounts 
+ number means the block number, since this isthe genesis block the blocknumber is zero 
+ gasUsed is the sum of gas used in all transactions of this block 
+ parentHash is the hash of the previous block, since its is genesis block its is zero in this case 
 
 Now we move on to creation of private network
 
