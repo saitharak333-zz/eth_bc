@@ -12,10 +12,15 @@ Installing Ganache: Emulator
     https://truffleframework.com/ganache
     
 Click on Download option.
+
 We will bw downloading a app image, when the download is finished open properties and select on Permissions and tick the box which allows you to run this app image as a program.
+
 When this is finished open it by double clicking on it.
+
 Then a opp up box appears saying "Would you like to integrate ganache with your system" click on yes please.
-Accept Analytics 
+
+Accept Analytics
+
 We can we a test network with 10 nodes setup
 
 If you have installed the previous versions of Nodejs and npm use google help to 1st uninstal that version and then try to install the newer versions specified down here.
@@ -66,7 +71,7 @@ Enabling Ethereum language
 
     apm install language-ethereum
     
-- - - - - - - - - - - - - - - - - - - - - - - Setup is now finished - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Setup is now finished 
  
 Creation of a New Ethereum Priavte Node
 
@@ -94,15 +99,24 @@ Exit pupeth using crtl + z command
 
 Description of 1stnet.json file
 
- Chain ID means Networks ID 
+ Chain ID means Networks ID
+ 
  Byzantium fault tolerance will be applied from block four 
+ 
  timestamp checks for the time difference between two blocks and sets the difficulty level accordingly 
+ 
  gaslimit can be specified 
+ 
  difficulty level can be viewed as average number of times requird to compute the nonce value. In a private network we can keep a low value for this in order to make the things look ease 
+ 
  coinbase species the miners address, the mining reward will be credited into that address  
+ 
  alloc section is used to prefund certain accounts 
+ 
  number means the block number, since this isthe genesis block the blocknumber is zero 
+ 
  gasUsed is the sum of gas used in all transactions of this block 
+ 
  parentHash is the hash of the previous block, since its is genesis block its is zero in this case 
 
 Now we move on to creation of private network
@@ -110,14 +124,17 @@ Now we move on to creation of private network
     geth --datadir . init 1stnet.json
     
 There are 2 folders created, 1. geth and 2. keystore
+
 Keystore contains all the accounts present in our private network
+
 Since we didnt create any accounts we have the keystore directory emepty by now.
 
 Next step is to create user accounts,
-    
-     
 
+    geth --datadir . create new
+    
 Asks for password, test1234 
+
 In this network iam creating 3 users, all with the pass keys
 
 To get details of all the accounts created till now use command,
