@@ -55,3 +55,21 @@ Now install truffle framework: used for compiling testing and deploying the bloc
 Be specific on installing truffle version 4.0.4, to check the version use
 
     truffle version
+
+Installing atom ide
+
+    sudo add-apt-repository ppa:webupd8team/atom
+    sudo apt update
+    sudo apt install atom
+
+Enabling Ethereum language
+
+    apm install language-ethereum
+ 
+ Setup is now finished
+ 
+To create a New Ethereum Priavte Tset Network
+
+1. Create a new directory
+
+    mkdir -p ethpro
