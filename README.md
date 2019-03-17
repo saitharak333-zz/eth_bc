@@ -20,6 +20,8 @@ We can we a test network with 10 nodes setup
 
 If you have installed the previous versions of Nodejs and npm use google help to 1st uninstal that version and then try to install the newer versions specified down here.
 
+    sudo apt-get purge --auto-remove nodejs
+
 Installing Nodejs and npm: Nodejs atleast versiuon 8 and npm atleast version 5
 
     sudo apt install curl
@@ -44,5 +46,12 @@ Type
 to get the version number of the npm installed
 
 Now install truffle framework: used for compiling testing and deploying the blockchains,
+1st uninstall the orevious versions of truffle
 
-    npm install -g truffle
+    sudo npm uninstall -g truffle
+    
+    sudo npm install -g truffle@4.0.4
+
+Be specific on installing truffle version 4.0.4, to check the version use
+
+    truffle version
