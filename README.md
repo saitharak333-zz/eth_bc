@@ -97,7 +97,7 @@ Manage Existing genesis --> Export genesis configuration Now we can type the fil
 
 Exit pupeth using crtl + z command
 
-Description of 1stnet.json file
+Description of ethnet.json file
 
  Chain ID means Networks ID
  
@@ -121,7 +121,7 @@ Description of 1stnet.json file
 
 Now we move on to creation of private network
 
-    geth --datadir . init 1stnet.json
+    geth --datadir . init ethnet.json
     
 There are 2 folders created, 1. geth and 2. keystore
 
