@@ -260,3 +260,56 @@ Exiting the console
 
     cntrl + C
 
+Now till now what we have done is, we have used truffle develop to start a aganche core etherium node
+
+Now on we try to connect with the ganache software,
+
+Modify the truffle.js file with the network settings of the ganache
+
+Now also we use truffle to connect with ganache by using,
+
+    truffle migrate --compile-all --reset --network ganache
+    
+the above command is both used to connect with ganache core and to compile the smart contracts
+
+In order to just connect with the truffle console instead of typing truffle develop use,
+
+    truffle console --network ganache
+    
+With the console open we can try all our previously used commands,
+    
+    Greetings.deployed().then(function(instance){app = instance;})
+    
+To check the balance,
+    
+    web3.fromWei(web3.eth.getBalance(web3.eth.coinbase), "ether").toNumber()
+    
+Sample intructions,
+    
+    app.getMessaage()
+    app.setGreetings("Hello World", {from: web3.eth.coinbase})
+    
+Sending ether,
+    
+    web3.eth.sendTransaction({from: web3.eth.coinbase, to: web3.eth.accounts[1], value: web3.toWei(5, "ether")})
+    
+Now creating a decentralised application
+
+1. Create a work directory, open the terminal inside that
+
+2. Unbox
+
+        truffle unbox chainskills/chainskills-box
+        
+3. Created a new ChainList contract in contracts folder
+
+4. Also create a migrations script corresponding to this smart contract
+
+5. Now we can deploy a network using truffle develop or ganache, we prefer ganache. In order to use ganache we have to modify the network section of the truffle.js file.
+
+Now we van check whether this is perfectly working or not by doing the things discussed above.
+
+    ChainList.deployed().then(function(instance){app = instance;})
+    app.sellArticle("Phone8", "To buy the latest version", web3.toWei(5, "ether"), {from: web3.eth.coinbase})
+    app.getArticle()
+    
