@@ -16,3 +16,39 @@
 21:23:27.232914 db@open done T·20.209169ms
 21:59:44.403197 db@close closing
 21:59:44.403269 db@close done T·71.417µs
+=============== Mar 18, 2019 (IST) ===============
+01:05:08.203643 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:05:08.203772 version@stat F·[1] S·50KiB[50KiB] Sc·[0.25]
+01:05:08.203781 db@open opening
+01:05:08.203823 journal@recovery F·1
+01:05:08.205528 journal@recovery recovering @3
+01:05:08.247665 memdb@flush created L0@5 N·2943 S·155KiB "\x063\xce..FX$,v3558":"\xf9\xc4\x10..[\x88\n,v3557"
+01:05:08.249948 version@stat F·[2] S·205KiB[205KiB] Sc·[0.50]
+01:05:08.338413 db@janitor F·4 G·0
+01:05:08.338521 db@open done T·134.715231ms
+01:21:41.811535 table@compaction L0·2 -> L1·0 S·205KiB Q·3837
+01:21:42.382623 table@build created L1@8 N·2590 S·167KiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+01:21:42.433026 version@stat F·[0 1] S·167KiB[0B 167KiB] Sc·[0.00 0.00]
+01:21:42.560558 table@compaction committed F-1 S-38KiB Ke·0 D·972 T·691.893795ms
+01:21:42.578243 table@remove removed @5
+01:21:42.578362 table@remove removed @2
+01:30:29.130370 db@close closing
+01:30:29.167456 db@close done T·37.072522ms
+=============== Mar 18, 2019 (IST) ===============
+01:42:20.505890 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+01:42:20.562207 version@stat F·[0 1] S·167KiB[0B 167KiB] Sc·[0.00 0.00]
+01:42:20.562313 db@open opening
+01:42:20.562589 journal@recovery F·1
+01:42:20.572133 journal@recovery recovering @6
+01:42:20.726766 memdb@flush created L0@9 N·862 S·45KiB "\x1a\xd9V..\xae\xf4a,v4426":"\xfe%\x04..~\xe6\x1a,v4425"
+01:42:20.736071 version@stat F·[1 1] S·213KiB[45KiB 167KiB] Sc·[0.25 0.00]
+01:42:20.872304 db@janitor F·4 G·0
+01:42:20.872414 db@open done T·310.05867ms
+01:52:31.118515 table@compaction L0·1 -> L1·1 S·213KiB Q·4511
+01:52:31.198002 table@build created L1@12 N·3166 S·202KiB "\x02d\xfc..\x19Ba,v428":"\xfe\x88\xcf..H\xef\xcc,v361"
+01:52:31.198219 version@stat F·[0 1] S·202KiB[0B 202KiB] Sc·[0.00 0.00]
+01:52:31.253849 table@compaction committed F-1 S-10KiB Ke·0 D·286 T·135.162544ms
+01:52:31.254315 table@remove removed @9
+01:52:31.254565 table@remove removed @8
+01:53:12.911745 db@close closing
+01:53:12.911977 db@close done T·227.349µs
