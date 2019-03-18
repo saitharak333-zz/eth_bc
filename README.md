@@ -204,4 +204,59 @@ Few Commands:
         
 Now use cntrl + C to get exit from running private node
 
-        
+Creating a Smart Contract using Truffle
+
+Initialisation of Environment
+
+    truffle init
+
+After the intialisation and smart contract is created, open 2 terminal windows where we did truffle init and do the following
+
+In one terminal open 
+
+    truffle develop
+    
+10 user accounts will be created (same as ganeche)
+
+And in other terminal open console logs
+
+    truffle develop --logs
+    
+To add the contact in the block, 
+
+    migrate --compile-all --reset
+    
+Normal also possible
+
+    migrate
+    
+In order to get the address of the contract, use the same name that is used in migrations file
+
+    Greetings.address
+    
+Create an instance of this deployed smart contract,
+
+    Greetings.deployed().then(function(instance){app = instance;})
+    
+With the above line we got a truffle object which got created
+
+Now we can call our synchronous functions,
+
+    app.getGreetings()
+    
+In order to get all the accounts,
+
+    web3.eth.accounts
+    
+In order to call asynchronous functions,
+
+    app.setGreetings("Hello World", {from: web3.eth.accounts[0]})
+
+Exiting the develop
+    
+    .exit
+    
+Exiting the console
+
+    cntrl + C
+
