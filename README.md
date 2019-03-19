@@ -315,4 +315,6 @@ Now we van check whether this is perfectly working or not by doing the things di
     app.sellArticle("Phone8", "To buy the latest version", web3.toWei(5, "ether"), {from: web3.eth.coinbase})
     app.getArticle()
     
->>>>>>> 6604ec0d1ca97553f7edb6d487759eefc4f884fd
+Now testing the contract
+
+    
