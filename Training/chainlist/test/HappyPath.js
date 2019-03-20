@@ -32,4 +32,17 @@ contract('ChainList', function(accounts){
       assert.equal(data[3].toNumber(), web3.toWei(articlePrice, "ether"), "article price must be " + articlePrice);
     })
   });
+
+  it("should trigger an event", function() {
+    return ChainList.deployed().then(function(instance) {
+      ChainListInstance = instance;
+      return ChainListInstance.sellArticle(articleName, articleDescription, web3.toWei(articlePrice, "ether"), {from: seller});
+    }).then(function(receipt) {
+      assert.equal(receipt.logs.length, 1, "one event has to be triggered");
+      assert.equal(receipt.logs[0].event, "LogSellArticle", "right event has been triggered");
+      assert.equal(receipt.logs[0].args._seller, seller, "seller is " + seller);
+      assert.equal(receipt.logs[0].args._name, articleName, "article name is " + articleName);
+      assert.equal(receipt.logs[0].args._price.toNumber(), web3.toWei(articlePrice, "ether"), "article price is " + articlePrice);
+    })
+  });
 });

@@ -6,7 +6,7 @@ contract ChainList{
   string name;
   string description;
   uint256 price;
-
+  event LogSellArticle(address indexed _seller, string _name, uint256 _price);
 /* Constructor */
 
 /* sell an article */
@@ -15,6 +15,8 @@ contract ChainList{
     name = _name;
     description = _description;
     price = _price;
+
+    LogSellArticle(seller, name, price);
   }
 
 /* get an article */
