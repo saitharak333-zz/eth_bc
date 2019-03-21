@@ -317,4 +317,66 @@ Now we van check whether this is perfectly working or not by doing the things di
     
 Now testing the contract
 
+    truffle test --network ganache
+    
+Now to install the node modules for front end part, 
+
+    npm install
+    
+If this throws a error regarding the permission then use the following commands and then again try npm install
+
+    sudo chown -R $(whoami) ~/.npm
+    sudo chown -R $(whoami) ~/.config
+    
+In order to run the dapp,
+
+    truffle run dev
+    
+Calling events from console,
+
+    var sellEvent = app.LogSellArticle({}, {fromBlock: 0, toBlock: 'latest'}).watch(function(error, event) {console.log(event);})
+    
+In order to stop watching,
+    
+    sellEvent.stopWatching();
+
+Again to see all the events, use the same command which we have used to initialise sellEvents
+
+Creating Events in the front end part requires adding the code to app.js file and index.html
+
+Connecting to the private network
+
+1st we have to start our private node by using the following, go to the private directory in the terminal and 
+
+    ./startnode.sh
+    
+Now the private network is setup, add the network in truffle.js file and do the migrations
+
+    truffle migrate --compile-all --reset --network ournetwork
+    
+In order to deploy the smart contract from an account include the from field with the account address in truffle.js file and unloack the account in the truffle console before applying migrations using
+
+    web3.personal.unlockAccount(web3.eth.accounts[1], "test1234", 600)
+
+after unlocking, use the migrate command to migrate the contacts.
+
+Adding BuyArticle function, after adding BuyArticle function in the .sol file, open truffle console
+
+    truffle console --network ganache
+    
+create an instance of the contract,
+
+    ChainList.deployed().then(function(instance){app = instance;})
+
+Create an article
+
+    app.sellArticle("Phone8", "To buy the latest version", web3.toWei(5, "ether"), {from: web3.eth.coinbase})
+    
+create a buy article event,
+
+    var buyEvent = app.LogBuyArticle({_seller: web3.eth.coinbase}, {}).watch(function(error, event) {console.log(event);})
+
+to buy the artice use,
+
+    app.buyArticle({from: web3.eth.accounts[1], value: web3.toWei(5, "ether")})
     
